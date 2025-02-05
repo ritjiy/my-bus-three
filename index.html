@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RitTech provides world-class digital solutions including website development, automation, and videography.">
+    <meta name="keywords" content="RitTech, digital solutions, website development, automation, videography">
+    <meta name="author" content="RitTech">
+    <title>RitTech - World-Class Digital Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="img/logo_black.png" alt="RitTech Logo">
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#quote">Get a Quote</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <img class="active" src="img/h1.jpg" alt="Hero Image 1">
+        <img src="img/h2.jpg" alt="Hero Image 2">
+        <img src="img/h3.jpg" alt="Hero Image 3">
+        <img src="img/h4.jpg" alt="Hero Image 4">
+        <img src="img/h5.jpg" alt="Hero Image 5">
+        <div class="hero-overlay">
+            <h1 class="hero-text">Welcome to RitTech</h1>
+            <div class="hero-buttons">
+                <button aria-label="Get a Quote">Get a Quote</button>
+                <button aria-label="Our Projects">Our Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="who-we-are-section" id="about">
+        <h2>Who We Are & What We Do</h2>
+        <p>At RitTech, we specialize in website and software development, automation, and videography/photography. We bridge the tech gap in regions where outdated methods prevail, offering solutions that enhance speed, efficiency, and profitability. Technology isn’t just about keeping up—it’s about getting ahead. Our automation services streamline processes, boost productivity, and help businesses grow.</p> 
+        <p>Our videography and photography services capture impactful moments, telling powerful stories that last for generations. Whether it’s modern software solutions or stunning visuals, RitTech provides the tech you need to succeed in a fast-paced world.</p>
+        <div class="card-container">
+            <div class="card">
+                <i class="fas fa-bullseye"></i>
+                <h3>Our Mission</h3>
+                <p>Our mission is to be a leading tech company, providing impactful solutions in website development, automation, and videography. We bridge the technological divide to enhance efficiency, speed, and profits, helping our clients grow in a fast-paced world.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Our Vision</h3>
+                <p>Our vision is to be a Good God-led tech company that bridges the tech gap within Nigeria, Africa, and beyond. We aim to empower businesses and communities by offering modern, efficient solutions that drive success.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>Our Values</h3>
+                <p>At RitTech, we value integrity, innovation, and excellence. We’re committed to using technology for good, making life easier and businesses more profitable. Our solutions are designed to help you succeed, with speed and efficiency at the core of everything we do.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Work Section -->
+    <section class="our-work-section" id="portfolio">
+        <h2>Our Work</h2>
+        <div class="card-container">
+            <div class="card portfolio-card">
+                <img src="img/p1.jpg" alt="Project 1 - Website for XYZ">
+                <h3>Hospital Management System</h3>
+                <p>A custom-built website with modern UX/UI.</p>
+                <a href="#" aria-label="View More about Website for XYZ">View More</a>
+            </div>
+            <div class="card portfolio-card">
+                <img src="img/p2.jpg" alt="Project 2 - AI Automation">
+                <h3>AI Automation</h3>
+                <p>AI-powered automation to streamline workflows.</p>
+                <a href="#" aria-label="View More about AI Automation">View More</a>
+            </div>
+            <div class="card portfolio-card">
+                <img src="img/p3.jpg" alt="Project 3 - Brand Videography">
+                <h3>Brand Videography</h3>
+                <p>Professional videography for brand storytelling.</p>
+                <a href="#" aria-label="View More about Brand Videography">View More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get a Quote Section -->
+    <section class="quote-section" id="quote">
+        <h2>Get a Quote</h2>
+        <form class="quote-form">
+            <h3>Contact Information:</h3>
+            <div class="form-row">
+                <input type="text" placeholder="Full Name (required)" required aria-label="Full Name">
+                <input type="email" placeholder="Email Address (required)" required aria-label="Email Address">
+            </div>
+            <input type="tel" placeholder="Phone Number (optional)" aria-label="Phone Number">
+
+            <h3>Project Details:</h3>
+            <div class="form-row">
+                <select required aria-label="Project Type">
+                    <option value="" disabled selected>Project Type</option>
+                    <option value="website-development">Website Development</option>
+                    <option value="software-development">Software Development</option>
+                    <option value="automation">Automation</option>
+                    <option value="videography">Videography</option>
+                    <option value="photography">Photography</option>
+                </select>
+                <input type="text" placeholder="Estimated Budget (e.g., $500-$1000)" required aria-label="Estimated Budget">
+            </div>
+            <textarea placeholder="Brief Project Description" rows="3" required aria-label="Brief Project Description"></textarea>
+            <select required aria-label="Desired Timeline">
+                <option value="" disabled selected>Desired Timeline</option>
+                <option value="1-month">1 Month</option>
+                <option value="3-months">3 Months</option>
+                <option value="6-months">6 Months</option>
+                <option value="flexible">Flexible</option>
+            </select>
+
+            <h3>Additional Information:</h3>
+            <input type="file" placeholder="Upload File/Attachment (optional)" aria-label="Upload File/Attachment">
+            <select required aria-label="Preferred Method of Contact">
+                <option value="" disabled selected>Preferred Method of Contact</option>
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label>
+                <input type="checkbox" required aria-label="Agree to terms and conditions">
+                I agree to the terms and conditions.
+            </label>
+            <button type="submit" aria-label="Get a Quote">Get a Quote</button>
+        </form>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients-section" id="clients">
+        <h2>Our Clients</h2>
+        <div class="clients-slider">
+            <div class="clients-container">
+                <div class="client">
+                    <img src="img/t1.jpg" alt="Client 1">
+                    <div class="client-name">Client 1</div>
+                </div>
+                <div class="client">
+                    <img src="img/t2.jpg" alt="Client 2">
+                    <div class="client-name">Client 2</div>
+                </div>
+                <div class="client">
+                    <img src="img/t3.jpg" alt="Client 3">
+                    <div class="client-name">Client 3</div>
+                </div>
+                <div class="client">
+                    <img src="img/t4.jpg" alt="Client 4">
+                    <div class="client-name">Client 4</div>
+                </div>
+                <div class="client">
+                    <img src="img/t5.jpg" alt="Client 5">
+                    <div class="client-name">Client 5</div>
+                </div>
+                <div class="client">
+                    <img src="img/t6.jpg" alt="Client 6">
+                    <div class="client-name">Client 6</div>
+                </div>
+                <div class="client">
+                    <img src="img/t7.jpg" alt="Client 7">
+                    <div class="client-name">Client 7</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section" id="contact">
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <p>Home</p>
+            <p>About</p>
+            <p>Services</p>
+            <p>Portfolio</p>
+            <p>Contact</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <i class="fab fa-facebook" aria-label="Facebook"></i>
+            <i class="fab fa-twitter" aria-label="Twitter"></i>
+            <i class="fab fa-instagram" aria-label="Instagram"></i>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@rittech.com</p>
+            <p>Address: 123 Tech Lane, Innovation City, ST 12345</p>
+        </div>
+        <div class="footer-subscribe">
+            <h3>Subscribe to Newsletter</h3>
+            <input type="email" placeholder="Your email" aria-label="Your email">
+            <button aria-label="Subscribe">Subscribe</button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
