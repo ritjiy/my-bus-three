@@ -12,25 +12,27 @@
     --transition: all 0.3s ease;
 }
 
-/* Global Styles */
-body {
-    font-family: 'Poppins', sans-serif;
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: var(--background-light);
-    color: var(--text-color);
-    line-height: 1.8;
-    overflow-x: hidden;
-}
-a {
-    text-decoration: none;
-    color: var(--primary-brown);
-}
-a:hover {
-    color: var(--primary-brown-dark);
+    box-sizing: border-box;
 }
 
-/* Navigation Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation Bar */
 nav {
     background-color: var(--background-dark);
     padding: 10px 20px;
@@ -49,44 +51,29 @@ nav {
     margin: 0 auto;
 }
 
-/* Logo Styles */
 .logo img {
-    height: 60px; /* Increase the height for a larger logo */
+    height: 50px; /* Adjust logo size */
     width: auto; /* Maintain aspect ratio */
-}
-
-/* Responsive Logo */
-@media (max-width: 768px) {
-    .logo img {
-        height: 50px; /* Slightly smaller logo for mobile */
-    }
-}
-
-@media (max-width: 480px) {
-    .logo img {
-        height: 40px; /* Even smaller for very small screens */
-    }
 }
 
 .hamburger {
     display: none;
     font-size: 24px;
     cursor: pointer;
+    color: var(--text-color);
 }
 
 .nav-links {
     display: flex;
     gap: 20px;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-links li a {
     color: var(--text-color);
     font-size: 16px;
     font-weight: 600;
-    padding: 10px 20px;
+    padding: 10px 15px;
     transition: var(--transition);
 }
 
@@ -105,7 +92,7 @@ nav {
         flex-direction: column;
         background-color: var(--background-dark);
         position: absolute;
-        top: 70px;
+        top: 70px; /* Adjusted for logo height */
         left: 0;
         width: 100%;
         padding: 20px;
@@ -114,6 +101,10 @@ nav {
 
     .nav-links.active {
         display: flex;
+    }
+
+    .nav-links li a {
+        padding: 10px 0; /* Reduce padding for mobile */
     }
 }
 
@@ -128,6 +119,7 @@ nav {
     justify-content: center;
     text-align: center;
 }
+
 .hero img {
     position: absolute;
     width: 100%;
@@ -136,9 +128,11 @@ nav {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+
 .hero img.active {
     opacity: 1;
 }
+
 .hero::before {
     content: '';
     position: absolute;
@@ -149,33 +143,39 @@ nav {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
+
 .hero-overlay {
     position: relative;
     z-index: 2;
-    padding: 40px;
+    padding: 20px;
     border-radius: var(--border-radius);
 }
+
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: 700;
     color: var(--white);
 }
+
 .hero-buttons {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
+    flex-wrap: wrap;
 }
+
 .hero-buttons button {
     background-color: var(--primary-brown);
     color: var(--white);
-    padding: 15px 30px;
+    padding: 10px 20px;
     font-size: 16px;
     border: none;
     cursor: pointer;
     border-radius: var(--border-radius);
     transition: var(--transition);
 }
+
 .hero-buttons button:hover {
     background-color: var(--primary-brown-dark);
 }
@@ -183,23 +183,28 @@ nav {
 /* Who We Are Section */
 .who-we-are-section {
     background-color: var(--background-light);
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
+
 .who-we-are-section h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: var(--primary-brown);
 }
+
 .who-we-are-section p {
     max-width: 800px;
-    margin: 0 auto 40px;
+    margin: 0 auto 30px;
 }
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    padding: 0 20px;
 }
+
 .card {
     background-color: var(--white);
     padding: 20px;
@@ -207,10 +212,12 @@ nav {
     box-shadow: var(--shadow);
     transition: var(--transition);
 }
+
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
+
 .card i {
     font-size: 40px;
     color: var(--primary-brown);
@@ -220,24 +227,28 @@ nav {
 /* Our Work Section */
 .our-work-section {
     background-color: var(--background-dark);
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
+
 .our-work-section h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: var(--primary-brown);
 }
+
 .portfolio-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: var(--border-radius);
 }
+
 .portfolio-card h3 {
     margin: 15px 0 10px;
     color: var(--primary-brown);
 }
+
 .portfolio-card a {
     color: var(--primary-brown);
     font-weight: 600;
@@ -246,35 +257,41 @@ nav {
 /* Get a Quote Section */
 .quote-section {
     background-color: var(--background-light);
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
+
 .quote-section h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: var(--primary-brown);
 }
+
 .quote-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     max-width: 800px;
     margin: 0 auto;
 }
+
 .form-row {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
+
 .form-row input,
 .form-row select,
 .quote-form textarea {
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: var(--border-radius);
     width: 100%;
     font-size: 16px;
     transition: var(--transition);
 }
+
 .form-row input:focus,
 .form-row select:focus,
 .quote-form textarea:focus {
@@ -282,19 +299,22 @@ nav {
     box-shadow: 0 0 0 3px rgba(111, 78, 55, 0.1);
     outline: none;
 }
+
 .quote-form textarea {
     resize: none;
     height: 120px;
 }
+
 .quote-form button {
     background-color: var(--primary-brown);
     color: var(--white);
-    padding: 15px;
+    padding: 12px;
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: var(--transition);
 }
+
 .quote-form button:hover {
     background-color: var(--primary-brown-dark);
 }
@@ -302,37 +322,44 @@ nav {
 /* Clients Section */
 .clients-section {
     background-color: var(--background-dark);
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
+
 .clients-section h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: var(--primary-brown);
 }
+
 .clients-slider {
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
 }
+
 .clients-container {
     display: flex;
     animation: scroll 20s linear infinite;
 }
+
 .client {
     min-width: 150px;
     text-align: center;
     margin: 0 20px;
 }
+
 .client img {
     width: 100%;
     height: 100px;
     object-fit: contain;
     transition: var(--transition);
 }
+
 .client img:hover {
     transform: scale(1.1);
 }
+
 .client-name {
     margin-top: 10px;
     font-weight: bold;
@@ -350,26 +377,31 @@ footer {
     color: var(--white);
     display: flex;
     justify-content: space-between;
-    padding: 40px;
+    padding: 40px 20px;
     flex-wrap: wrap;
 }
+
 .footer-links, .footer-social, .footer-subscribe, .footer-contact {
     flex: 1;
     min-width: 200px;
     margin: 10px;
 }
+
 .footer-links p, .footer-contact p {
     margin: 5px 0;
 }
+
 .footer-social i {
     font-size: 24px;
     margin-right: 15px;
     cursor: pointer;
     transition: var(--transition);
 }
+
 .footer-social i:hover {
     color: var(--background-light);
 }
+
 .footer-subscribe input {
     padding: 10px;
     border: 1px solid #ddd;
@@ -377,6 +409,7 @@ footer {
     width: 70%;
     margin-right: 10px;
 }
+
 .footer-subscribe button {
     padding: 10px 15px;
     background-color: var(--primary-brown-dark);
@@ -386,6 +419,7 @@ footer {
     cursor: pointer;
     transition: var(--transition);
 }
+
 .footer-subscribe button:hover {
     background-color: var(--primary-brown);
 }
